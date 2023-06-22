@@ -1,25 +1,29 @@
-import logo from './logo.svg';
+/**
+ * Basic App.js for hypothetical Character database web app
+ * Will be used by devs to update characters in this early state
+ */
+
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 
-function App() {
+import CreateChar from './components/CreateChar';
+import ShowCharList from './components/ShowCharList.js';
+import ShowCharDetails from './components/ShowCharDetails';
+import UpdateCharInfo from './components/UpdateCharInfo';
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <Routes>
+          <Route exact path='/' element={<ShowCharList />} />
+          <Route path='/create-char' element={<CreateChar />} />
+          <Route path='/edit-character/:id' element={<UpdateCharInfo />} />
+          <Route path='/show-character/:id' element={<ShowCharDetails />} />
+        </Routes>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
