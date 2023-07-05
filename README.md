@@ -1,3 +1,6 @@
+### NOTE: This is only the client. Server can be located at https://github.com/jameskendallbruce/Cry-Wolf-Server
+Both must run for full functionality.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
