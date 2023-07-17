@@ -10,6 +10,8 @@ import CreateChar from './components/CreateChar';
 import ShowCharList from './components/ShowCharList.js';
 import ShowCharDetails from './components/ShowCharDetails';
 import UpdateCharInfo from './components/UpdateCharInfo';
+import Userfront from "@userfront/react";
+
 
 const App = () => {
   return (

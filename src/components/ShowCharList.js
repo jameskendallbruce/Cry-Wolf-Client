@@ -3,6 +3,7 @@ import '../App.css';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import CharCard from './CharCard';
+import Login from './Login';
 
 function ShowCharList() {
   const [characters, setCharacters] = useState([]);
@@ -25,6 +26,9 @@ function ShowCharList() {
 
   return (
     <div className='ShowCharList'>
+      
+      <Login/>
+
       <div className='container'>
         <div className='row'>
           <div className='col-md-12'>

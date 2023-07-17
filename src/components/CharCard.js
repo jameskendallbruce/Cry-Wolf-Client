@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../App.css';
-//import Sam from '../images/Sam_v1.js';
 
 const CharCard = (props) => {
   const character = props.character;
@@ -9,13 +8,6 @@ const CharCard = (props) => {
   const abbrev = character.abbrev;
 
   const imageSrc = './images/' + abbrev + '_v1.png';
-  //const imageSrc = {require('/images/Sam_v1.png')};
-  //const imageSrc = './images/Sam_v1.png';
-
-  //src= {require(`${imageSrc}`)}
-  //src= {require({imageSrc})}
-  //src= {imageSrc}
-  //src= Sam
 
   return (
     <div className='card-container'>
