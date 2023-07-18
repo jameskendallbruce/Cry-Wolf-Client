@@ -14,12 +14,15 @@ import Login from './components/Login';
 import ResetPassword from './components/ResetPassword';
 import SignUp from './components/SignUp';
 import Userfront from "@userfront/react";
+import AuthNavbar from './components/AuthNavbar';
 
 
 const App = () => {
+  
   return (
     <Router>
-      <div>
+      <div class='cleanSans'>
+        <AuthNavbar/>
         <Routes>
           <Route exact path='/' element={<ShowCharList />} />
           <Route exact path='/Login' element={<Login />} />

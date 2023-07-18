@@ -17,10 +17,10 @@ const CharCard = (props) => {
         height={300}
       />
       <div className='desc'>
-        <h2>
+        <h1 className='hauntedSerif'>
           <Link to={`/show-character/${character._id}`}>{character.name}</Link>
-        </h2>
-        <h3>{character.headline}</h3>
+        </h1>
+        <h2 className='crude'>{character.headline}</h2>
       </div>
     </div>
   );
