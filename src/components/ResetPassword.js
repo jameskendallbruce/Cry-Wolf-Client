@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import '../App.css';
 import Userfront from "@userfront/react";
 
-const Login = (props) => {
+const ResetPassword = (props) => {
 
-    const LoginForm = Userfront.build({
-        toolId: "alnkkd",
+    const PasswordResetForm = Userfront.build({
+        toolId: "dkbmmo",
     });
 
     return (
@@ -18,22 +18,15 @@ const Login = (props) => {
             >
               Cancel
             </Link>
-            
-            <Link
-              to={`/Signup`}
-              className='btn btn-outline-info btn-lg'
-            >
-              Sign Up
-            </Link>
 
             <Link
-              to={`/Reset`}
+              to={`/Login`}
               className='btn btn-outline-info btn-lg'
             >
-              Reset Password
+              Login
             </Link>
 
-            <LoginForm/>
+            <PasswordResetForm/>
 
         </div>
     );
@@ -41,4 +34,4 @@ const Login = (props) => {
   };
 
   
-  export default Login;
+  export default ResetPassword;

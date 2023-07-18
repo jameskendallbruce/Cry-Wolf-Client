@@ -27,7 +27,12 @@ function ShowCharList() {
   return (
     <div className='ShowCharList'>
       
-      <Login/>
+      <Link
+        to={`/Login`}
+        className='btn btn-outline-info btn-lg'
+        >
+          Login
+      </Link>
 
       <div className='container'>
         <div className='row'>
