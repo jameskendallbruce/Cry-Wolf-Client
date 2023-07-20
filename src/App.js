@@ -16,13 +16,17 @@ import SignUp from './components/SignUp';
 import Userfront from "@userfront/react";
 import AuthNavbar from './components/AuthNavbar';
 
-
+//Locating that accesstoken
+console.log("Token found!: " + Userfront.name);
 const App = () => {
   
   return (
     <Router>
       <div class='cleanSans'>
         <AuthNavbar/>
+        {Userfront.accessToken &&
+          <h1>Hello{Userfront.accessToken} :/!</h1>
+        }
         <Routes>
           <Route exact path='/' element={<ShowCharList />} />
           <Route exact path='/Login' element={<Login />} />

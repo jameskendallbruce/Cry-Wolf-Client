@@ -3,6 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link } from 'react-router-dom';
+import Userfront from "@userfront/react";
 import WebFont from 'webfontloader';
 
 
@@ -22,6 +23,10 @@ function AuthNavbar() {
                 <NavDropdown title="USER" id="basic-nav-dropdown">
                 <NavDropdown.Item href={`/Login`}><h4>Login</h4></NavDropdown.Item>
                 <NavDropdown.Item href={`/Signup`}><h4>Sign Up</h4></NavDropdown.Item>
+                <NavDropdown.Item href={`/Reset`}><h4>Reset Password</h4></NavDropdown.Item>
+                {Userfront.accessToken &&
+                    <NavDropdown.Item onClick={Userfront.logout} href={`/`}><h4>Logout</h4></NavDropdown.Item>
+                }
                 </NavDropdown>
             </Nav>
           </div>
