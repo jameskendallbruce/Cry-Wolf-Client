@@ -6,6 +6,11 @@ import { Link } from 'react-router-dom';
 import Userfront from "@userfront/react";
 import WebFont from 'webfontloader';
 
+if (!Userfront.tokens.accessToken) {
+    console.log("Not logged in!!");
+} else if (Userfront.tokens.accessToken) {
+    console.log("Thinks it's logged in");
+}
 
 function AuthNavbar() {
 
@@ -21,10 +26,12 @@ function AuthNavbar() {
             <Nav className="me-auto">
                 <Nav.Link href={`/`}><h4>Home</h4></Nav.Link>
                 <NavDropdown title="USER" id="basic-nav-dropdown">
-                <NavDropdown.Item href={`/Login`}><h4>Login</h4></NavDropdown.Item>
+                {!Userfront.tokens.accessToken &&
+                    <NavDropdown.Item href={`/Login`}><h4>Login</h4></NavDropdown.Item>
+                }
                 <NavDropdown.Item href={`/Signup`}><h4>Sign Up</h4></NavDropdown.Item>
                 <NavDropdown.Item href={`/Reset`}><h4>Reset Password</h4></NavDropdown.Item>
-                {Userfront.accessToken &&
+                {Userfront.tokens.accessToken &&
                     <NavDropdown.Item onClick={Userfront.logout} href={`/`}><h4>Logout</h4></NavDropdown.Item>
                 }
                 </NavDropdown>

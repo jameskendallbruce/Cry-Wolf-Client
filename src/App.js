@@ -25,7 +25,7 @@ const App = () => {
       <div class='cleanSans'>
         <AuthNavbar/>
         {Userfront.accessToken &&
-          <h1>Hello{Userfront.accessToken} :/!</h1>
+          <h1>{`Hello ${Userfront.tokens.accessToken}`} :/!</h1>
         }
         <Routes>
           <Route exact path='/' element={<ShowCharList />} />
@@ -35,6 +35,7 @@ const App = () => {
           <Route path='/create-char' element={<CreateChar />} />
           <Route path='/edit-character/:id' element={<UpdateCharInfo />} />
           <Route path='/show-character/:id' element={<ShowCharDetails />} />
+          <Route path='/Dashboard' redirect='/' element={<ShowCharList />}/>
         </Routes>
       </div>
     </Router>
