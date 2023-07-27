@@ -10,19 +10,22 @@ const CharCard = (props) => {
   const imageSrc = './images/' + abbrev + '_v1.png';
 
   return (
+    <Link to={`/show-character/${character._id}`} style={{ textDecoration: 'none', color: 'white' }}>
+
     <div className='card-container'>
       <img
         src= {imageSrc}
         alt='no artwork currently exists for this character'
         height={300}
+        style={{ alignSelf: 'center' }}
       />
       <div className='desc'>
-        <h1 className='hauntedSerif'>
-          <Link to={`/show-character/${character._id}`}>{character.name}</Link>
-        </h1>
+        <h1 className='hauntedSerif'>{character.name}</h1>
         <h2 className='crude'>{character.headline}</h2>
       </div>
     </div>
+
+    </Link>   
   );
 };
 

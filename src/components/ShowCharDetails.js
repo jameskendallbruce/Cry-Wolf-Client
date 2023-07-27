@@ -39,31 +39,36 @@ function ShowCharDetails(props) {
   // Simplified version of full character rundown with bio but no stats
   const CharacterItem = (
     <div>
-      <div style={{ alignItems: 'center', flex: 1, justifyContent: 'center' }}><img
+      <div style={{ alignItems: 'center', flex: 1, justifyContent: 'center' }}>
+        <img
+        style={{ alignItems: 'center', flex: 1, justifyContent: 'center' }}
         src= {`${imageSrc}`}
         alt='no artwork currently exists for this character'
         height={500}
         />
       </div>
       <table className='table table-hover table-dark'>
-        <tbody>
+        <tbody style={{fontSize:'3vh'}}>
           <tr>
-            <th scope="row"><h3>{character.name}</h3></th>
-            <td>{character.headline}</td>
+            <th scope="row"><h1 className='hauntedSerif' style={{fontSize:'7vh'}}>{character.name}</h1></th>
+            <td className='scratchy'>{character.headline}</td>
           </tr>
+        </tbody>
+        <tbody className='crude' style={{fontSize:'3vh'}}>
           <tr>
-            <th scope='row'>Character Bio</th>
-            <td>{character.bio}</td>
-          </tr>
-          <tr>
-            <td style={{}}>
+            <td scope='row' style={{width: '40%'}}>
+              <h5 style={{fontSize:'3vh'}} className='scratchy'>Character Bio</h5>
+              <br/>
+              <text>{character.bio}</text>
+            </td>           
+            <td style={{width:'20%'}}>
               <h5 style={{color: "#a11710"}}>ATTACK</h5>
               <br/>
               <h5 style={{color: "#1073a1"}}>DEFENSE</h5>
               <br/>
               <h5 style={{color: "#00ad68"}}>MAGIC</h5>
             </td>
-            <td style={{height: 300}}>
+            <td style={{width:'40%'}}>
               <PieChart
                 animate={true}
                 totalValue={6}
