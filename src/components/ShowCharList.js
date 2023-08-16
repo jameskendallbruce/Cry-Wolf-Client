@@ -3,6 +3,7 @@ import '../App.css';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import CharCard from './CharCard';
+import PCTextCard from './PCTextCard';
 
 function ShowCharList() {
   const [characters, setCharacters] = useState([]);
