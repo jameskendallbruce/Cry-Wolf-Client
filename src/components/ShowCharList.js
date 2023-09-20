@@ -22,7 +22,7 @@ function ShowCharList() {
   const characterList =
     characters.length === 0
       ? 'there is no character record!'
-      : characters.map((character, k) => <CharCard character={character} key={k} />);
+      : characters.map((character, k) => <div><CharCard character={character} key={k} /><PCTextCard character={character} key={k}/></div>);
 
   return (
     <div className='ShowCharList'>

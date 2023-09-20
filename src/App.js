@@ -16,6 +16,7 @@ import SignUp from './components/SignUp';
 import Userfront from "@userfront/react";
 import AuthNavbar from './components/AuthNavbar';
 
+
 //Locating that accesstoken
 console.log("Token found!: " + Userfront.name);
 const App = () => {

@@ -93,13 +93,18 @@
 }
 
 .pc-card-container {
-  width: px;
-  border: 1px solid white;
+  width: 500px;
   margin: 0 auto;
   border-radius: 5px;
   overflow: hidden;
   align-items: center;
   justify-content: center;
+}
+
+.pc-text-container {
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .card-container:hover {
