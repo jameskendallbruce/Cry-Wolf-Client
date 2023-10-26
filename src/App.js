@@ -14,12 +14,20 @@ import Login from './components/Login';
 import ResetPassword from './components/ResetPassword';
 import SignUp from './components/SignUp';
 import Userfront from "@userfront/react";
+import AuthNavbar from './components/AuthNavbar';
 
 
+//Locating that accesstoken
+console.log("Token found!: " + Userfront.name);
 const App = () => {
+  
   return (
     <Router>
-      <div>
+      <div class='cleanSans'>
+        <AuthNavbar/>
+        {Userfront.accessToken &&
+          <h1>{`Hello ${Userfront.tokens.accessToken}`} :/!</h1>
+        }
         <Routes>
           <Route exact path='/' element={<ShowCharList />} />
           <Route exact path='/Login' element={<Login />} />
@@ -28,6 +36,7 @@ const App = () => {
           <Route path='/create-char' element={<CreateChar />} />
           <Route path='/edit-character/:id' element={<UpdateCharInfo />} />
           <Route path='/show-character/:id' element={<ShowCharDetails />} />
+          <Route path='/Dashboard' redirect='/' element={<ShowCharList />}/>
         </Routes>
       </div>
     </Router>

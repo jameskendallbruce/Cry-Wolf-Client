@@ -1,3 +1,8 @@
+*{
+  margin:0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
 
@@ -49,12 +54,14 @@
   background-color: #2c3e50;
   min-height: 100vh;
   color: white;
+  padding-bottom: 20vh;
 }
 
 .UpdateCharInfo {
   background-color: #2c3e50;
   min-height: 100vh;
   color: white;
+  padding-bottom: 20vh;
 }
 
 .ShowCharList {
@@ -70,27 +77,54 @@
 .list {
   display: grid;
   margin: 20px 0 50px 0;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: minmax(0, 0.8fr) 450px;
   grid-auto-rows: 1fr;
   grid-gap: 2em;
 }
 
 .card-container {
-  width: 250px;
-  border: 1px solid rgba(0,0,.125);
+  width: 270px;
+  border: 1px solid white;
   margin: 0 auto;
   border-radius: 5px;
   overflow: hidden;
+  align-items: center;
+  justify-content: center;
+}
+
+.pc-card-container {
+  width: 500px;
+  margin: 0 auto;
+  border-radius: 5px;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+}
+
+.pc-text-container {
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.card-container:hover {
+  border: 5px solid white;
 }
 
 .desc {
-  height: 130px;
-  padding: 10px;
+  height: 150px;
+}
+
+.desc h1 {
+  padding-left: 30px;
+  font-size: 3em;
 }
 
 .desc h2 {
   /*font-size: 1em; */
   font-weight: 400;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .desc h3, p {
@@ -101,4 +135,55 @@
   /*color: #6c757d;*/
   font-size: 1em;
   padding: 10px 0 10px 0;
+  padding-left: 20px;
 }
+
+.desc h4 {
+  /*color: #6c757d;*/
+  font-size: 1.5em;
+  padding: 15px 0 10px 10px;
+}
+.desc text{
+  padding-left: 30px;
+}
+
+.crude {
+  font-family: 'Nanum Pen Script', cursive;
+}
+
+.gothic {
+  font-family: 'Alike Angular', serif;
+}
+
+.scratchy {
+  font-family: 'Rock Salt', cursive;
+}
+
+.gothicSpooky {
+  font-family: 'Almendra', serif;
+}
+
+.hauntedSerif {
+  font-family: 'IM Fell English SC', serif;
+}
+
+.cleanSans {
+  font-family: 'Tajawal', sans-serif;
+}
+
+AuthNavBar {
+  background-color: #2c3e50;
+  color: white;
+}
+
+NavBar {
+  background-color: #2c3e50;
+  color: white;
+}
+
+/**
+Stored for when I need some font choices...
+
+font-family: 'IM Fell English SC', serif;
+
+*/

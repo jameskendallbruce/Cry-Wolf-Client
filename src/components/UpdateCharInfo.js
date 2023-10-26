@@ -67,7 +67,7 @@ function UpdateCharInfo(props) {
   };
 
   return (
-    <div className='UpdateCharacterInfo'>
+    <div className='UpdateCharInfo'>
       <div className='container'>
         <div className='row'>
           <div className='col-md-8 m-auto'>

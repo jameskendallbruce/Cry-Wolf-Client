@@ -3,7 +3,7 @@ import '../App.css';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import CharCard from './CharCard';
-import Login from './Login';
+import PCTextCard from './PCTextCard';
 
 function ShowCharList() {
   const [characters, setCharacters] = useState([]);
@@ -22,17 +22,10 @@ function ShowCharList() {
   const characterList =
     characters.length === 0
       ? 'there is no character record!'
-      : characters.map((character, k) => <CharCard character={character} key={k} />);
+      : characters.map((character, k) => <div><CharCard character={character} key={k} /><PCTextCard character={character} key={k}/></div>);
 
   return (
     <div className='ShowCharList'>
-      
-      <Link
-        to={`/Login`}
-        className='btn btn-outline-info btn-lg'
-        >
-          Login
-      </Link>
 
       <div className='container'>
         <div className='row'>
