@@ -3,7 +3,7 @@ Both must run for full functionality. Only supported locally but the MongoDB dat
 
 # Basic Description
 Welcome to Cry Wolf. This is still in the early stages of development.\
-Cry Wolf is a paranormal mystery adventure game. In its current form, it is primarily a character generator with a character gallery. As development continues, world exploration, character interactions, character choice, and turn-based combat will all be fully implemented to create a complete point-and-click adventure game (with light RPG and visual novel elements). In the meantime, get to know the characters that have been added.
+Cry Wolf is a paranormal mystery adventure game. In its current form, it is primarily a character generator with a character gallery. As development continues, world exploration, character interactions, character choice, and turn-based combat will all be fully implemented to create a complete point-and-click adventure game (with light RPG and visual novel elements). In the meantime, get to know the characters that have been added including the initial player choices Sam, Artemis, Remy and Ola.
 Note: Although this allows new characters to be added to the database, the current iteration only fully supports characters with existing art. Feel free to play around. All character info is backed up elsewhere.
 
 # BOILERPLATE INSTRUCTIONS: Getting Started with Create React App
